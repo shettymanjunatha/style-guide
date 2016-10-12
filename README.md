@@ -705,6 +705,9 @@ File structure:
 
 # Reference Links
 1) https://toddmotto.com/opinionated-angular-js-styleguide-for-teams/
+
 2) http://www.angularjstutorial.com/
+
 3) https://dzone.com/articles/angularjs-coding-best
+
 4) https://johnpapa.net/angular-style-guide/
