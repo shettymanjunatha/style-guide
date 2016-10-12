@@ -702,9 +702,3 @@ File structure:
 
 
 * Consider decreasing number of network requests by bundling/caching html template files into your main javascript file, using [grunt-html2js](https://github.com/karlgoldstein/grunt-html2js) / [gulp-html2js](https://github.com/fraserxu/gulp-html2js). See [here](http://ng-learn.org/2014/08/Populating_template_cache_with_html2js/) and [here](http://slides.com/yanivefraim-1/real-world-angularjs#/34) for details. This is particularly useful when the project has a lot of small html templates that can be a part of the main (minified and gzipped) javascript file.
-
-# Contribution
-
-Since the goal of this style guide is to be community-driven, contributions are greatly appreciated.
-For example, you can contribute by extending the Testing section or by translating the style guide to your language.
-
