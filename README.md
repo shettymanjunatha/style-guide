@@ -691,6 +691,52 @@ File structure:
 
 * For newer versions of the framework (>=1.4.0) use the built-in i18n tools, when using older versions (<1.4.0) use [`angular-translate`](https://github.com/angular-translate/angular-translate).
 
+Install angular-translate library
+
+Translation files should be placed under app/assests/i18n/..
+  app/assests/i18n/en-EN/main.json
+Create a common service for translation, this will configure the location of our translation files. 
+
+$translateProvider can be used to customise part and language
+.config(['$translateProvider', '$translatePartialLoaderProvider', function ($translateProvider, $translatePartialLoaderProvider) {
+
+    $translateProvider.useLoader('$translatePartialLoader', {
+        urlTemplate: 'i18n/{lang}/{part}.json'
+    });
+    $translateProvider.preferredLanguage('en-EN');
+}])
+
+main.json file is the  simple JSON hash.
+
+Translation can be done at the view and controller
+
+Angular Translate provides the $translate service which you can be used in the Controllers.
+Controller
+
+An example usage of the $translate service can be:
+  Loads the mentioned translation file for that controller
+    $translatePartialLoaderProvider.addPart('main');
+  $translate.refresh();
+.controller('TranslateMe', ['$scope', '$translate', function ($scope, $translate) {
+    $translatePartialLoaderProvider.addPart('main');
+  $translate.refresh();
+    $translate('PAGE.TITLE')
+        .then(function (translatedValue) {
+            $scope.pageTitle = translatedValue;
+        });
+});
+The translate service also has a method for directly translating strings without the need to handle a promise, using $translate.instant():
+
+.controller('TranslateMe', ['$scope', '$translate', function ($scope, $translate) {
+    $scope.pageTitle = $translate.instant('TITLE.DASHBOARD'); // Assuming TITLE.DASHBOARD is defined
+});
+
+  
+View(Recommended)
+   
+  Use translate filter ( | translate)to translate keys
+  <a class="icon icon-back-arrow">{{'Button.Cancel' | translate}}</a>
+
 # Performance
 
 * Optimize the digest cycle
