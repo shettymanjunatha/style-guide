@@ -47,7 +47,9 @@ Here is its layout:
 │   │   ├── controllers
 │   │   ├── directives
 │   │   ├── filters
-│   │   └── services
+│   │   ├── partials
+|   |   └── services
+
 │   ├── home
 │   │   ├── controllers
 │   │   │   ├── FirstCtrl.js
@@ -62,11 +64,16 @@ Here is its layout:
 │   │   │   ├── filter1.spec.js
 │   │   │   └── filter2.js
 │   │   │   └── filter2.spec.js
-│   │   └── services
-│   │       ├── service1.js
-│   │       ├── service1.spec.js
-│   │       └── service2.js
-│   │       └── service2.spec.js
+│   │   |── services
+│   │   |   ├── service1.js
+│   │   |   ├── service1.spec.js
+│   │   |   └── service2.js
+│   │   |   └── service2.spec.js
+│   |   |__ partials
+│   │       ├── view1.html
+│   │       ├── view2.html
+│   │       └── view3.html
+│   │       └── view4.html
 │   └── about
 │       ├── controllers
 │       │   └── ThirdCtrl.js
@@ -79,10 +86,15 @@ Here is its layout:
 │       ├── filters
 │       │   └── filter3.js
 │       │   └── filter3.spec.js
-│       └── services
-│           └── service3.js
-│           └── service3.spec.js
-├── partials
+│       |── services
+│       |    └── service3.js
+│       |    └── service3.spec.js
+|       |__ partials
+│          ├── view1.html
+│          ├── view2.html
+│          └── view3.html
+│          └── view4.html
+
 ├── lib
 └── e2e-tests
 ```
